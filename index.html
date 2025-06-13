@@ -7,8 +7,44 @@
     <link rel = "stylesheet" href = "css/style.css"/>
 </head>
 <body>
-    <!--TODO: About,Project,Experience-->>
-    <script src = "jss/main.js">
+    <!--Navigation Bar-->
+    <nav class = "navbar">
+        <div class = "container">
+            <a href = "#hero" class = "logo">Ashmit Agrawal</a>
+            <ul class = "nav-links">
+                <li> <a href = "#about"> About Ashmit </a> </li>
+                <li> <a href = "#projects">  Projects</a></li>
+                <li><a href = "#Work Experience"> Experience </a> </li>
+                <li> <a href = "Contact" > Contact Details</a></li>
+            </ul>
+            <div class="theme-toggle-container">
+                <span class="mode-label light">Light</span>
+            <label class = "theme-switch">
+                <input type = "checkbox" id = "theme-toggle"/>
+                <span class = "slider">
+                    <span class="icon sun">☀️ </span>
+                    <span class="icon moon">🌙 </span>
+                </span>
+            </label>
+            <span class="mode-label dark">Dark</span>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id ="hero" class = "hero">
+        <div class = "container">
+        <h1> Hello World, I am Ashmit Agrawal</h1>
+        <p> I am a Computer Science enthusiast with a passion for data, robotics, and coding.
+            Whether I am diving into large datasets to uncover insights, tinkering with sensors
+            and motors to bring robots to life, or writing clean, efficient code, I love
+            solving problems and learning something new every day.</p>
+            <a href = "#projects" class = "btn" > My Projects </a>
+    </div>
+    </section>
+    
+    <!--TODO: About,Project,Experience-->
+    <script src = "js/main.js">
     </script>
 </body>
 </html>
