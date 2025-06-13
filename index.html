@@ -10,13 +10,15 @@
     <!--Navigation Bar-->
     <nav class = "navbar">
         <div class = "container">
-            <a href = "#hero" class = "logo">Ashmit Agrawal</a>
+            <a href = "#hero" class = "logo">Portfolio</a>
             <ul class = "nav-links">
                 <li> <a href = "#about"> About Ashmit </a> </li>
                 <li> <a href = "#projects">  Projects</a></li>
                 <li><a href = "#Work Experience"> Experience </a> </li>
-                <Whyli> <a href = "Contact" > Contact Details</a></li>
+            <li><a href = "Contact" > Contact Details</a></li>
             </ul>
+
+            <!--Light/Dark Theme Switch-->
             <div class="theme-toggle-container">
                 <span class="mode-label light">Light</span>
             <label class = "theme-switch">
@@ -50,10 +52,63 @@
                     I am a Computer Science enthusiast with a passion for data, robotics, and coding.
                     Whether I am diving into large datasets to uncover insights, tinkering with sensors
                     and motors to bring robots to life, or writing clean, efficient code, I love
-                    solving problems and learning something new every day.</p>
+                    solving problems and learning something new every day.
+                </p>
             </div>
         </div>
      </section>
+
+     <!--Projects-->
+  <!-- PROJECTS -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2>Projects</h2>
+      
+      <!-- Filter buttons (we’ll wire up JS later) -->
+      <div class="project-filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="game">Game Dev</button>
+      </div>
+      
+      <!-- Grid of project cards -->
+      <div class="project-grid">
+        <!-- Example project card -->
+        <div class="project-card" data-category="web">
+          <img src="images/project1.png" alt="Project 1 screenshot" />
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>Built with HTML, CSS & JavaScript. Responsive design with dark mode.</p>
+            <a href="#" class="project-link">View Repo</a>
+          </div>
+        </div>
+        
+        <!-- Copy / adapt for each project -->
+        <div class="project-card" data-category="ml">
+          <img src="images/project2.png" alt="Project 2 screenshot" />
+          <div class="project-info">
+            <h3>Image Classifier</h3>
+            <p>TensorFlow model to recognize handwritten digits.</p>
+            <a href="#" class="project-link">View Repo</a>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="game">
+          <img src="images/project3.png" alt="Project 3 screenshot" />
+          <div class="project-info">
+            <h3>Spaceship Shooter</h3>
+            <p>A Haskell + Gloss game with levels and scoring.</p>
+            <a href="#" class="project-link">View Repo</a>
+          </div>
+        </div>
+        
+        <!-- Add more cards here -->
+      </div>
+    </div>
+  </section>
+
+
     <!--TODO: About,Project,Experience-->
     <script src = "js/main.js">
     </script>
