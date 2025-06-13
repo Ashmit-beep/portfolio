@@ -172,6 +172,87 @@ body{
   
   /*Project Section>
 
+
+
+
+
+
+  /*Work Experience Section
+  /* ─── Timeline ────────────────────────────────────────────────────────── */
+/* ─── Timeline ────────────────────────────────────────────────────────── */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 2px;
+    height: 100%;
+    background: var(--text-light, #ccc);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    border-radius: 50%;
+  }
+  
+  .timeline-content {
+    background: var(--bg);
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .timeline-content .date {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+  .timeline-content h3 {
+    margin: 0.1rem 0 0.1rem;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+
+  .timeline-content h4{
+    margin: 0.2rem 0 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .timeline-content p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .timeline {
+      padding-left: 1rem;
+    }
+    .timeline::before {
+      left: 0.5rem;
+    }
+    .timeline-marker {
+      left: -0.25rem;
+    }
+  }
+  
+
   
 
 
