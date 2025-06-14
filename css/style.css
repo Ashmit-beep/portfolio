@@ -7,6 +7,8 @@
     --text-dark: #eeeeee;
     --accent: #007acc;
     --transition-speed: 0.3s;
+    --primary-gradient: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    --card-bg: rgba(255,255,255,0.1);
   }
 
   html[data-theme="light"] {
@@ -43,6 +45,7 @@ body{
     width: 100%;
     top: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .navbar .container{
@@ -170,14 +173,14 @@ body{
     }
   }
   
-  /*Project Section>
+  /*Project Section> */
 
 
 
 
 
 
-  /*Work Experience Section
+  /*Work Experience Section */
 /* -- Timeline -- */
 .timeline {
     position: relative;
@@ -240,24 +243,112 @@ body{
     line-height: 1.5;
   }
   
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    .timeline {
-      padding-left: 1rem;
-    }
-    .timeline::before {
-      left: 0.5rem;
-    }
-    .timeline-marker {
-      left: -0.25rem;
-    }
+/* ─── Contact Section ────────────────────────────────────────────────── */
+
+#contact {
+    background: var(--bg);
+    color: var(--text);
+    padding: 4rem 0;
   }
   
-
+  #contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--accent);
+    position: relative;
+  }
+  #contact h2::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    background: var(--accent);
+    margin: 0.5rem auto 2rem;
+  }
+ 
   
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-card {
+    text-align: center;
+  }
+  .contact-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .contact-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  .contact-card p {
+    color: var(--text);
+    margin: 0;
+  }
+  .contact-card a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  
+  #contact h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-top: 3rem;
+  }
+ 
+  .contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  color: var(--text);
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
 
-
-
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: filter var(--transition-speed);
+  }
+  .contact-form button:hover {
+    filter: brightness(0.9);
+  }
+  
+  @media (max-width: 600px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
 
 
