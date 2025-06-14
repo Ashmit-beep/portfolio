@@ -27,12 +27,36 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
-/**
- * Contact Form - Basic Alert and Reset
- */
-document.getElementById('contact-form').addEventListener('submit', e => {
-    e.preventDefault();
-    alert("Thanks! I'll get back to you soon.");
-    e.target.reset();
+/**Rotating Roles before About Me */
+document.addEventListener("DOMContentLoaded", () => {
+    const roles = [
+      "Data Analyst",
+      "Software Engineer",
+      "Full Stack Engineer",
+      "Robotics Mentor"
+    ];
+    let idx = 0, char = 0, deleting = false;
+    const el = document.getElementById("animated-text");
+    const speed = 100;         
+    const pauseEnd = 2000;     
+    const pauseStart = 500;   
+  
+    function tick() {
+      const word = roles[idx];
+      el.textContent = deleting
+        ? word.substring(0, char--)
+        : word.substring(0, ++char);
+  
+      let delay = deleting ? speed/2 : speed;
+      if (!deleting && char === word.length) {
+        delay = pauseEnd; deleting = true;
+      } else if (deleting && char === 0) {
+        deleting = false;
+        idx = (idx + 1) % roles.length;
+        delay = pauseStart;
+      }
+      setTimeout(tick, delay);
+    }
+    tick();
   });
-
+  
