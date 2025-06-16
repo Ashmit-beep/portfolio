@@ -187,6 +187,46 @@ body{
       margin: 0 auto;
     }
   }
+  /* ─── Basic Info (About Me) ─────────────────────────────────────────── */
+.basic-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem 3rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .basic-info .info-item {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .basic-info .info-item h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  
+  .basic-info .info-item p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  
+  .basic-info .info-item a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+  
+  .basic-info .info-item a:hover {
+    color: var(--accent);
+    border-color: var(--text);
+  }
+  
   
   /*Project Section> */
 

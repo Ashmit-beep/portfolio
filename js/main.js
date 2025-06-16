@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const roles = [
       "Data Analyst",
       "Software Engineer",
-      "Full Stack Engineer",
-      "Robotics Mentor"
+      "Full-Stack Engineer",
+      "IoT Developer",
+      "Mobile App Developer"
     ];
     let idx = 0, char = 0, deleting = false;
     const el = document.getElementById("animated-text");
@@ -59,4 +60,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     tick();
   });
+  
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const links    = document.querySelectorAll('.navbar [data-target]');
+    const sections = document.querySelectorAll('main section');
+  
+    function showSection(id) {
+      sections.forEach(sec => {
+        sec.classList.toggle('active', sec.id === id);
+      });
+    }
+  
+    // click handlers
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = link.dataset.target;
+        showSection(target);
+        // optional: update URL hash
+        history.pushState(null, '', `#${target}`);
+      });
+    });
+  
+    // on load: if there’s a hash, show that; else default to hero
+    const start = location.hash.replace('#','') || 'hero';
+    showSection(start);
+  });
+  
   
