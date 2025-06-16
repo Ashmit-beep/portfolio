@@ -144,10 +144,11 @@ body{
 }
 
 .about-container{
+    padding: 4rem;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
+    align-items: justify;
+    gap: 1rem;
 }
 
 .about-img{
@@ -176,6 +177,8 @@ body{
   .about-content p {
     line-height: 1.6;
     margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   @media (max-width: 768px) {
@@ -193,7 +196,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem 3rem;
     margin-top: 2rem;
-    padding-top: 2rem;
+    padding: 2rem;
     border-top: 2px solid rgba(255, 255, 255, 0.1);
   }
   
