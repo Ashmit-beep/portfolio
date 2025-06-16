@@ -87,5 +87,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const start = location.hash.replace('#','') || 'hero';
     showSection(start);
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // grab all your nav links and all sections
+    const links    = document.querySelectorAll('.nav-links a, .logo');
+    const sections = document.querySelectorAll('section.section');
+  
+    function showSection(id) {
+      sections.forEach(sec => {
+        sec.classList.toggle('active', sec.id === id);
+      });
+    }
+  
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        const id = href.slice(1);
+        showSection(id);
+        history.replaceState(null, '', `#${id}`);
+      });
+    });
+  
+    // On page-load: read hash or default to hero
+    const start = location.hash?.slice(1) || 'hero';
+    showSection(start);
+  });
+  
   
   
