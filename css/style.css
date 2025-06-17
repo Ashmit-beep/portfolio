@@ -152,7 +152,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: justify;
-    gap: 1rem;
+    gap: 6rem;
 }
 
 .about-img{
